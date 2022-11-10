@@ -14,6 +14,7 @@ const AddMovie = ({addMovie}) => {
 addMovie({title,description,posterUrl,rate,id:Math.random()});
 handleClose()
 
+
   }
 
   return (

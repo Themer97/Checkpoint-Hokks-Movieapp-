@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const MovieCard = ({movie}) => {
   return <Card style={{ width: '18rem' }}>
@@ -12,7 +13,7 @@ const MovieCard = ({movie}) => {
     <Card.Text>
       {"⭐".repeat(movie.rate)}
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Link to={`/Details/${movie.id}`}><Button variant="primary">More details</Button></Link>
   </Card.Body>
 </Card>
 }

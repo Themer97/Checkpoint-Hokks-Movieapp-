@@ -13,7 +13,7 @@ const MoviesList = ({movies,searchTitle,searchRate}) => {
   return (
     <div style={myStyle}>
       {
-        movies.filter(movie=>movie.title.toUpperCase().includes(searchTitle.toUpperCase().trim())).map((movie=><MovieCard key={movie.id} movie={movie} />))
+        movies.filter(movie=>movie.title.toUpperCase().includes(searchTitle.toUpperCase().trim()) && movie.rate>=searchRate).map((movie=><MovieCard key={movie.id} movie={movie} />))
       }
       </div>
   )

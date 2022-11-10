@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap'
 import ReactStars from 'react-rating-stars-component'
+import { Link } from 'react-router-dom';
 
 const Navigation = ({setSearchTitle,setSearchRate}) => {
   const ratingChanged = (newRating) => {
@@ -11,9 +12,8 @@ const Navigation = ({setSearchTitle,setSearchRate}) => {
   <Container>
     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link as={Link} to='/'>Home</Nav.Link>
+      
     </Nav>
     <ReactStars
     count={5}
